@@ -3,17 +3,14 @@ part of 'get_weather_cubit.dart';
 @immutable
 sealed class GetWeatherState {}
 
-class WeatherInitialState extends GetWeatherState{}
+class WeatherInitial extends GetWeatherState {}
 
-class WeatherLoadedState extends GetWeatherState{
- final ModelWeather weatherModel;
+class WeatherLoaded extends GetWeatherState {}
 
-  WeatherLoadedState(this.weatherModel);
+class WeatherSuccess extends GetWeatherState {
+  ModelWeather? weatherModel;
+
+  WeatherSuccess({required this.weatherModel});
 }
 
-class WeatherFailureState extends GetWeatherState{
- final String error_message;
-
-  WeatherFailureState(this.error_message);
-}
-
+class WeatherFailureState extends GetWeatherState {}
