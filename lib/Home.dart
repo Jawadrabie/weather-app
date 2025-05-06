@@ -24,7 +24,8 @@ class Home extends StatelessWidget {
             return WeatherInfoBody(
               weatherModel: state.weatherModel!,
             );
-          } else {
+          }
+          else {
             return Center(
                 child: Container(
                     color: Colors.pink,

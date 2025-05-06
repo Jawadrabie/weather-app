@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather2/Home.dart';
+import 'package:weather2/Service/Service_Model.dart';
 import '../Model/weather_model.dart';
 
 import 'cubit/get_weather_cubit.dart';
@@ -20,15 +20,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => GetWeatherCubit(),
+      create: (context) => GetWeatherCubit(Servic()),
       child: BlocBuilder<GetWeatherCubit, GetWeatherState>(
         builder: (context, state) => MaterialApp(
           theme: ThemeData(
-            primarySwatch: getMaterialColor(
-                BlocProvider.of<GetWeatherCubit>(context)
-                        .weatherModel!
-                        .Text_Condition ??
-                    " "),
+            primarySwatch:
+            getMaterialColor(
+                BlocProvider.of<GetWeatherCubit>(context).weatherModel?.Text_Condition
+            ),
+
           ),
           home: Home(),
         ),
