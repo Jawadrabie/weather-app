@@ -10,6 +10,7 @@ import 'cubit/get_weather_cubit.dart';
 void main() {
   runApp(const MyApp());
   //  Servic(Dio()).getWeather(cityName: 'london');
+
 }
 
 //final dio = Dio();
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       create: (context) => GetWeatherCubit(Servic()),
       child: BlocBuilder<GetWeatherCubit, GetWeatherState>(
         builder: (context, state) => MaterialApp(
+          debugShowCheckedModeBanner: false,
           theme: ThemeData(
             primarySwatch:
             getMaterialColor(
