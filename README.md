@@ -1,16 +1,33 @@
-# weather2
+# 🌦️ Weather App (Flutter)
 
-A new Flutter project.
+A modern cross-platform Weather Application built with **Flutter**, delivering real-time and forecasted weather data with a clean and intuitive interface.  
+Designed for **performance, scalability, and cross-device compatibility**, supporting **Android, iOS, Web, Windows, Linux, and macOS**.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Features
+- 🌍 **Real-time weather updates** powered by external REST APIs.
+- 📍 **Location-based forecast** using device geolocation.
+- 📊 **Hourly & daily forecasts** with rich UI components.
+- 🌙 **Dark/Light themes** for better user experience.
+- 📱 **Cross-platform** (single codebase for all major OS).
+- ⚡ **Optimized performance** with caching and minimal API calls.
+- 🔧 Clean Architecture with MVVM and Repository Pattern.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🛠️ Tech Stack
+- **Flutter & Dart**
+- **State Management**: Bloc & Cubit
+- **APIs**: REST APIs (via Dio & http)
+- **Local Storage**: Hive & SharedPreferences
+- **CI/CD Ready**: Easily integrable with GitHub Actions or Codemagic
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🚀 Installation
+```bash
+git clone https://github.com/<your-repo>/weather2.git
+cd weather2
+flutter pub get
+flutter run
